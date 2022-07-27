@@ -33,7 +33,7 @@ docker build . -t favicon-generator
 ### Run image
 
 ```
-docker run 
+docker run \
 -v /local/path/to/image:/data \
 -u $(id -u ${USER}):$(id -g ${USER}) \
 --rm favicon-generator [input-file]
@@ -42,7 +42,7 @@ docker run
 To set resulting png quality, adjust environment variable `PNG_QUALITY`.
 If `PNG_QUALITY` is set to 100, no lossy compression will be done.
 ```
-docker run 
+docker run \
 -v /local/path/to/image:/data \
 -u $(id -u ${USER}):$(id -g ${USER}) \
 --env PNG_QUALITY=30 \
